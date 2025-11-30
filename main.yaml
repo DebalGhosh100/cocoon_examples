@@ -11,7 +11,7 @@ blocks:
   - for:
       individual: server
       in: ${servers.web-servers}
-      run: echo "Server: ${server.name} at ${server.ip}:${server.port}"
+      run: 'echo "Server: ${server.name} at ${server.ip}:${server.port}"'
 
   # Example 3: Parallel loop execution
   # Download files from multiple URLs simultaneously

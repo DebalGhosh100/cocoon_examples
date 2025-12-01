@@ -40,13 +40,6 @@ blocks:
           run: "sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y neovim net-tools tree && ls -lah ~ && uname -a && df -h && free -h"
           log-into: ./logs/server2_execution.log
 
-      # Server 3: Update, install tools, and gather system information
-      - run-remotely:
-          ip: ${machines.server3.ip}
-          user: ${machines.server3.username}
-          pass: ${machines.server3.password}
-          run: "sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y neovim net-tools tree && ls -lah ~ && uname -a && df -h && free -h"
-          log-into: ./logs/server3_execution.log
 
   # Display logs collected from all remote executions
   - run: |
@@ -57,9 +50,7 @@ blocks:
       echo ""
       echo "--- Server 2 Execution Log ---"
       cat ./logs/server2_execution.log
-      echo ""
-      echo "--- Server 3 Execution Log ---"
-      cat ./logs/server3_execution.log
+
 
   # Summary: Display total servers and log files created
   - run: |

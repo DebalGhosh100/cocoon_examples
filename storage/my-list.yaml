@@ -1,0 +1,5 @@
+sample-list:
+    - entry-name: name1
+      entry-id: id1
+    - entry-name: name2
+      entry-id: id2

@@ -1,0 +1,4 @@
+key: value
+outer:
+    inner:
+        key: inner-value

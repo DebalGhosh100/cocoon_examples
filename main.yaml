@@ -3,3 +3,10 @@ blocks:
   - run: echo ${first.key}
 
   - run: echo ${first.outer.inner.key}
+
+  - for:
+      individual: entry
+      in: ${my-list.sample-list}
+      run: |
+          echo ${entry.entry-name}
+          echo ${entry.entry-id}
